@@ -1,0 +1,28 @@
+from selenium import webdriver
+from time import sleep
+sleep(3)
+print("Hello world")
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path='anaconda3/pythonテスト/chromedriver.exe')
+driver.get("https://web.directcloud.jp/login/")
+time.sleep(3)
+login_id = driver.find_element_by_name("company_code")
+login_id.send_keys("ongakudou1222")
+
+next_btn = driver.find_element_by_name("id")
+next_btn.send_keys("takeuchi-a")
+
+time.sleep(2)
+
+password = driver.find_element_by_name("password")
+password.send_keys("aoi.1902")
+
+login_btn = driver.find_element_by_name("loginbutton")
+login_btn.click()
+time.sleep(4)
+login_btn.click()
+time.sleep(4)
